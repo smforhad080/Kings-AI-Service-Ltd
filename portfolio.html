@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | King's AI Service</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+  </script>
+</head>
+<body>
+  <header class="bg-gray-900 text-white p-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold">← Home</a>
+    <div>
+      <button onclick="switchLanguage('en')" class="px-2 py-1 bg-yellow-500 rounded">EN</button>
+      <button onclick="switchLanguage('bn')" class="px-2 py-1 bg-yellow-500 rounded">বাংলা</button>
+    </div>
+  </header>
+
+  <section class="text-center py-10">
+    <h1 class="text-4xl font-bold mb-2" data-lang="en">My Portfolio</h1>
+    <h1 class="text-4xl font-bold mb-2" data-lang="bn" style="display:none;">আমার পোর্টফোলিও</h1>
+    <p class="text-lg mb-6" data-lang="en">Explore some of my featured projects.</p>
+    <p class="text-lg mb-6" data-lang="bn" style="display:none;">আমার কিছু নির্বাচিত কাজ দেখুন।</p>
+    
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+      <div class="bg-white p-4 shadow rounded">
+        <h3 class="text-xl font-bold" data-lang="en">E-commerce Website</h3>
+        <h3 class="text-xl font-bold" data-lang="bn" style="display:none;">ই-কমার্স ওয়েবসাইট</h3>
+        <p data-lang="en">Built a responsive online store with integrated payment gateway.</p>
+        <p data-lang="bn" style="display:none;">একটি রেসপন্সিভ অনলাইন স্টোর তৈরি করেছি যেখানে পেমেন্ট গেটওয়ে যুক্ত আছে।</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <h3 class="text-xl font-bold" data-lang="en">NGO Dashboard</h3>
+        <h3 class="text-xl font-bold" data-lang="bn" style="display:none;">এনজিও ড্যাশবোর্ড</h3>
+        <p data-lang="en">Designed an interactive dashboard to monitor activities.</p>
+        <p data-lang="bn" style="display:none;">কর্মকাণ্ড পর্যবেক্ষণের জন্য ইন্টারঅ্যাকটিভ ড্যাশবোর্ড তৈরি করেছি।</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <h3 class="text-xl font-bold" data-lang="en">AI Chatbot</h3>
+        <h3 class="text-xl font-bold" data-lang="bn" style="display:none;">এআই চ্যাটবট</h3>
+        <p data-lang="en">Built an AI chatbot for automated customer service.</p>
+        <p data-lang="bn" style="display:none;">অটোমেটেড কাস্টমার সার্ভিসের জন্য একটি এআই চ্যাটবট তৈরি করেছি।</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white text-center p-4">
+    &copy; 2025 King's AI Service
+  </footer>
+</body>
+</html>

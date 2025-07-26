@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | King's AI Service</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+  </script>
+</head>
+<body>
+  <header class="bg-gray-900 text-white p-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold">← Home</a>
+    <div>
+      <button onclick="switchLanguage('en')" class="px-2 py-1 bg-yellow-500 rounded">EN</button>
+      <button onclick="switchLanguage('bn')" class="px-2 py-1 bg-yellow-500 rounded">বাংলা</button>
+    </div>
+  </header>
+
+  <section class="text-center py-10 px-4">
+    <h1 class="text-4xl font-bold mb-2" data-lang="en">Latest Blog Posts</h1>
+    <h1 class="text-4xl font-bold mb-2" data-lang="bn" style="display:none;">সাম্প্রতিক ব্লগ পোস্ট</h1>
+    
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-6">
+      <div class="bg-white p-4 shadow rounded text-left">
+        <h3 class="text-xl font-bold" data-lang="en">Why AI is the Future of Work</h3>
+        <h3 class="text-xl font-bold" data-lang="bn" style="display:none;">কেন এআই ভবিষ্যতের কর্মক্ষেত্র</h3>
+        <p class="mt-2 text-sm" data-lang="en">AI is transforming industries. Learn how it's shaping tomorrow’s jobs.</p>
+        <p class="mt-2 text-sm" data-lang="bn" style="display:none;">এআই প্রতিটি খাত বদলে দিচ্ছে। জানুন ভবিষ্যতের চাকরি কেমন হবে।</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded text-left">
+        <h3 class="text-xl font-bold" data-lang="en">Top 5 Web Trends in 2025</h3>
+        <h3 class="text-xl font-bold" data-lang="bn" style="display:none;">২০২৫ সালের শীর্ষ ৫টি ওয়েব ট্রেন্ড</h3>
+        <p class="mt-2 text-sm" data-lang="en">From AI to accessibility, discover the web trends that matter most.</p>
+        <p class="mt-2 text-sm" data-lang="bn" style="display:none;">এআই থেকে অ্যাক্সেসিবিলিটি – শীর্ষ ওয়েব ট্রেন্ড গুলো দেখুন।</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white text-center p-4 mt-10">
+    &copy; 2025 King's AI Service
+  </footer>
+</body>
+</html>

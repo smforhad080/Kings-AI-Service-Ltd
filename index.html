@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>King's AI Service</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-gray-900 text-white p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src="assets/logo.png" alt="Logo" class="h-10">
+      <a href="index.html" class="text-2xl font-bold">King's Service</a>
+    </div>
+    <div>
+      <button onclick="switchLanguage('en')" class="px-2 py-1 bg-yellow-500 rounded">EN</button>
+      <button onclick="switchLanguage('bn')" class="px-2 py-1 bg-yellow-500 rounded">বাংলা</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-16">
+    <h1 class="text-5xl font-bold" data-lang="en">Welcome to King's AI Service</h1>
+    <h1 class="text-5xl font-bold" data-lang="bn" style="display:none;">কিং’স এআই সার্ভিসে স্বাগতম</h1>
+    <p class="mt-4 text-lg max-w-2xl mx-auto" data-lang="en">
+      We provide next-level AI solutions, web design, and digital marketing.
+    </p>
+    <p class="mt-4 text-lg max-w-2xl mx-auto" data-lang="bn" style="display:none;">
+      আমরা দিচ্ছি পরবর্তী প্রজন্মের এআই সমাধান, ওয়েব ডিজাইন এবং ডিজিটাল মার্কেটিং।
+    </p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-8 text-center bg-gray-100">
+    <h2 class="text-3xl font-semibold mb-4" data-lang="en">About</h2>
+    <h2 class="text-3xl font-semibold mb-4" data-lang="bn" style="display:none;">আমাদের সম্পর্কে</h2>
+    <p data-lang="en" class="max-w-3xl mx-auto">
+      Hello! I’m Sultan Mahmud Farhad, the visionary behind King’s AI Service.
+      With expertise in AI, web solutions, and digital branding, I help businesses grow with smart technology.
+    </p>
+    <p data-lang="bn" style="display:none;" class="max-w-3xl mx-auto">
+      হ্যালো! আমি সুলতান মাহমুদ ফরহাদ, কিং’স এআই সার্ভিসের প্রতিষ্ঠাতা। 
+      এআই, ওয়েব সলিউশন এবং ডিজিটাল ব্র্যান্ডিং-এ দক্ষতা নিয়ে আমি ব্যবসাগুলোকে স্মার্ট প্রযুক্তির মাধ্যমে এগিয়ে নিতে সাহায্য করি।
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-8 text-center">
+    <h2 class="text-3xl font-semibold mb-6" data-lang="en">Our Services</h2>
+    <h2 class="text-3xl font-semibold mb-6" data-lang="bn" style="display:none;">আমাদের সেবা</h2>
+    <div class="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div class="p-4 bg-white shadow rounded">
+        <h3 class="text-xl font-bold" data-lang="en">Web Design</h3>
+        <h3 class="text-xl font-bold" data-lang="bn" style="display:none;">ওয়েব ডিজাইন</h3>
+        <p data-lang="en">Modern, responsive websites for your brand.</p>
+        <p data-lang="bn" style="display:none;">আপনার ব্র্যান্ডের জন্য আধুনিক রেসপন্সিভ ওয়েবসাইট।</p>
+      </div>
+      <div class="p-4 bg-white shadow rounded">
+        <h3 class="text-xl font-bold" data-lang="en">AI Consultation</h3>
+        <h3 class="text-xl font-bold" data-lang="bn" style="display:none;">এআই পরামর্শ</h3>
+        <p data-lang="en">AI-driven solutions for automation and growth.</p>
+        <p data-lang="bn" style="display:none;">অটোমেশন ও উন্নতির জন্য এআই সমাধান।</p>
+      </div>
+      <div class="p-4 bg-white shadow rounded">
+        <h3 class="text-xl font-bold" data-lang="en">Digital Marketing</h3>
+        <h3 class="text-xl font-bold" data-lang="bn" style="display:none;">ডিজিটাল মার্কেটিং</h3>
+        <p data-lang="en">Targeted campaigns to boost online presence.</p>
+        <p data-lang="bn" style="display:none;">অনলাইন উপস্থিতি বৃদ্ধির জন্য টার্গেটেড ক্যাম্পেইন।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-8 text-center bg-gray-100">
+    <h2 class="text-3xl font-semibold mb-4" data-lang="en">Contact</h2>
+    <h2 class="text-3xl font-semibold mb-4" data-lang="bn" style="display:none;">যোগাযোগ</h2>
+    <form class="max-w-md mx-auto">
+      <input type="text" placeholder="Name" class="w-full mb-4 p-2 border rounded" />
+      <input type="email" placeholder="Email" class="w-full mb-4 p-2 border rounded" />
+      <textarea placeholder="Message" class="w-full mb-4 p-2 border rounded"></textarea>
+      <button class="bg-yellow-500 px-6 py-2 rounded">Send</button>
+    </form>
+  </section>
+
+  <footer class="bg-gray-900 text-white text-center p-4">
+    &copy; 2025 King's Service
+  </footer>
+</body>
+</html>
