@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Basic SEO -->
+<meta name="description" content="King's AI Service – AI solutions, web development, and smart automation.">
+<meta name="keywords" content="AI, King's AI, AI Specialist, web development, automation, portfolio, blog, King's Service">
+<meta name="author" content="King's AI">
+
+<!-- Open Graph for Social Media -->
+<meta property="og:title" content="King's AI Service">
+<meta property="og:description" content="AI-powered solutions, professional portfolio, and insights from King's AI.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:url" content="https://smforhad080.github.io/KingsAI-Website/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="King's AI Service">
+<meta name="twitter:description" content="Explore AI solutions, portfolio, and blogs from King's AI.">
+<meta name="twitter:image" content="assets/logo.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/logo.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog | King's AI Service</title>
@@ -16,12 +36,21 @@
 </head>
 <body>
   <header class="bg-gray-900 text-white p-4 flex justify-between items-center">
-    <a href="index.html" class="text-xl font-bold">← Home</a>
-    <div>
-      <button onclick="switchLanguage('en')" class="px-2 py-1 bg-yellow-500 rounded">EN</button>
-      <button onclick="switchLanguage('bn')" class="px-2 py-1 bg-yellow-500 rounded">বাংলা</button>
-    </div>
-  </header>
+  <div class="flex items-center">
+    <img src="assets/logo.png" alt="King's AI Logo" class="h-10 mr-3">
+    <h1 class="text-2xl font-bold">King's AI Service</h1>
+  </div>
+  <nav class="space-x-4">
+    <a href="index.html" class="hover:text-yellow-400">Home</a>
+    <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+    <a href="blog.html" class="hover:text-yellow-400">Blog</a>
+  </nav>
+  <div>
+    <button onclick="switchLanguage('en')" class="px-2 py-1 bg-yellow-500 rounded">EN</button>
+    <button onclick="switchLanguage('bn')" class="px-2 py-1 bg-yellow-500 rounded">বাংলা</button>
+  </div>
+</header>
+
 
   <section class="text-center py-10 px-4">
     <h1 class="text-4xl font-bold mb-2" data-lang="en">Latest Blog Posts</h1>
@@ -44,7 +73,11 @@
   </section>
 
   <footer class="bg-gray-900 text-white text-center p-4 mt-10">
-    &copy; 2025 King's AI Service
-  </footer>
+  <p>&copy; 2025 King's AI Service | 
+    <a href="portfolio.html" class="hover:underline">Portfolio</a> 
+    <a href="index.html" class="hover:underline">Home</a>
+  </p>
+</footer>
+
 </body>
 </html>
