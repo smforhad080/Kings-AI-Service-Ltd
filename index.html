@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Basic SEO -->
+<meta name="description" content="King's AI Service – AI solutions, web development, and smart automation.">
+<meta name="keywords" content="AI, King's AI, AI Specialist, web development, automation, portfolio, blog, King's Service">
+<meta name="author" content="King's AI">
+
+<!-- Open Graph for Social Media -->
+<meta property="og:title" content="King's AI Service">
+<meta property="og:description" content="AI-powered solutions, professional portfolio, and insights from King's AI.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:url" content="https://smforhad080.github.io/KingsAI-Website/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="King's AI Service">
+<meta name="twitter:description" content="Explore AI solutions, portfolio, and blogs from King's AI.">
+<meta name="twitter:image" content="assets/logo.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/logo.png">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>King's AI Service</title>
@@ -15,17 +36,21 @@
   </script>
 </head>
 <body>
-  <!-- Header -->
   <header class="bg-gray-900 text-white p-4 flex justify-between items-center">
-    <div class="flex items-center space-x-2">
-      <img src="assets/logo.png" alt="Logo" class="h-10">
-      <a href="index.html" class="text-2xl font-bold">King's Service</a>
-    </div>
-    <div>
-      <button onclick="switchLanguage('en')" class="px-2 py-1 bg-yellow-500 rounded">EN</button>
-      <button onclick="switchLanguage('bn')" class="px-2 py-1 bg-yellow-500 rounded">বাংলা</button>
-    </div>
-  </header>
+  <div class="flex items-center">
+    <img src="assets/logo.png" alt="King's AI Logo" class="h-10 mr-3">
+    <h1 class="text-2xl font-bold">King's AI Service</h1>
+  </div>
+  <nav class="space-x-4">
+    <a href="index.html" class="hover:text-yellow-400">Home</a>
+    <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+    <a href="blog.html" class="hover:text-yellow-400">Blog</a>
+  </nav>
+  <div>
+    <button onclick="switchLanguage('en')" class="px-2 py-1 bg-yellow-500 rounded">EN</button>
+    <button onclick="switchLanguage('bn')" class="px-2 py-1 bg-yellow-500 rounded">বাংলা</button>
+  </div>
+</header>
 
   <!-- Hero -->
   <section class="text-center py-16">
@@ -39,24 +64,13 @@
     </p>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-8 text-center bg-gray-100">
-    <h2 class="text-3xl font-semibold mb-4" data-lang="en">About</h2>
-    <h2 class="text-3xl font-semibold mb-4" data-lang="bn" style="display:none;">আমাদের সম্পর্কে</h2>
-    <p data-lang="en" class="max-w-3xl mx-auto">
-      Hello! I’m Sultan Mahmud Farhad, the visionary behind King’s AI Service.
-      With expertise in AI, web solutions, and digital branding, I help businesses grow with smart technology.
-    </p>
-    <p data-lang="bn" style="display:none;" class="max-w-3xl mx-auto">
-      হ্যালো! আমি সুলতান মাহমুদ ফরহাদ, কিং’স এআই সার্ভিসের প্রতিষ্ঠাতা। 
-      এআই, ওয়েব সলিউশন এবং ডিজিটাল ব্র্যান্ডিং-এ দক্ষতা নিয়ে আমি ব্যবসাগুলোকে স্মার্ট প্রযুক্তির মাধ্যমে এগিয়ে নিতে সাহায্য করি।
-    </p>
-  </section>
+  
 
   <!-- Services -->
   <section id="services" class="py-8 text-center">
-    <h2 class="text-3xl font-semibold mb-6" data-lang="en">Our Services</h2>
+    <h2 class="text-3xl font-semibold mb-6" data-lang="en" >Our Services</h2>
     <h2 class="text-3xl font-semibold mb-6" data-lang="bn" style="display:none;">আমাদের সেবা</h2>
+
     <div class="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
       <div class="p-4 bg-white shadow rounded">
         <h3 class="text-xl font-bold" data-lang="en">Web Design</h3>
@@ -80,19 +94,39 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-8 text-center bg-gray-100">
-    <h2 class="text-3xl font-semibold mb-4" data-lang="en">Contact</h2>
-    <h2 class="text-3xl font-semibold mb-4" data-lang="bn" style="display:none;">যোগাযোগ</h2>
-    <form class="max-w-md mx-auto">
-      <input type="text" placeholder="Name" class="w-full mb-4 p-2 border rounded" />
-      <input type="email" placeholder="Email" class="w-full mb-4 p-2 border rounded" />
-      <textarea placeholder="Message" class="w-full mb-4 p-2 border rounded"></textarea>
-      <button class="bg-yellow-500 px-6 py-2 rounded">Send</button>
-    </form>
+
+ <section id="contact" class="py-10 bg-gray-100 text-center">
+  <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+  <form action="https://formspree.io/f/mnnzvjrl" method="POST" class="max-w-md mx-auto bg-white p-6 shadow rounded">
+    <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 mb-3 border rounded">
+    <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 mb-3 border rounded">
+    <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-2 mb-3 border rounded"></textarea>
+    <button type="submit" class="bg-yellow-500 px-4 py-2 rounded text-white hover:bg-yellow-600">Send</button>
+  </form>
+</section>
+
+
+<!-- About -->
+  <section id="about" class="py-8 text-center bg-gray-100">
+    <h2 class="text-3xl font-semibold mb-4" data-lang="en">About</h2>
+    <h2 class="text-3xl font-semibold mb-4" data-lang="bn" style="display:none;">আমাদের সম্পর্কে</h2>
+    <p data-lang="en" class="max-w-3xl mx-auto">
+      Hello! I’m Sultan Mahmud Farhad, the visionary behind King’s AI Service.
+      With expertise in AI, web solutions, and digital branding, I help businesses grow with smart technology.you can connect with me with this email address 
+<a href="smforhad080@gmail.com" class="hover:text-blue-400">smforhad080@gmail.com </a>
+    </p>
+    <p data-lang="bn" style="display:none;" class="max-w-3xl mx-auto">
+      হ্যালো! আমি সুলতান মাহমুদ ফরহাদ, কিং’স এআই সার্ভিসের প্রতিষ্ঠাতা। 
+      এআই, ওয়েব সলিউশন এবং ডিজিটাল ব্র্যান্ডিং-এ দক্ষতা নিয়ে আমি ব্যবসাগুলোকে স্মার্ট প্রযুক্তির মাধ্যমে এগিয়ে নিতে সাহায্য করি।
+    </p>
   </section>
 
-  <footer class="bg-gray-900 text-white text-center p-4">
-    &copy; 2025 King's Service
-  </footer>
+  <footer class="bg-gray-900 text-white text-center p-4 mt-10">
+  <p>&copy; 2025 King's AI Service | 
+    <a href="portfolio.html" class="hover:underline">Portfolio</a> | 
+    <a href="blog.html" class="hover:underline">Blog</a>
+  </p>
+</footer>
+
 </body>
 </html>
